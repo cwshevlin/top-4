@@ -1,0 +1,22 @@
+game
+	code (charfield)
+	user (many to many)
+	created_at (datetime)
+
+word
+	game (foreign key)
+	creator (foreign key)
+	value (charfield)
+	last_turn_used (foreign_key)
+	created_at (datetime)
+
+turn
+	user (foreign key)
+	game (foreign key)
+	created_at (datetime)
+
+rank
+	user (foreign key)
+	word (foreign key)
+	turn (foreign key)
+	order (int)
